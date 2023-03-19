@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="AntimaterCalculator.css">
+  </head>
+  <body>
+    <div class="GlyphCalculator">
+      <h1>Antimatter Dimensions Glyph Calculator</h1>
+      <hr>
+      <div class="CalculatorInputArea" onchange="GlyphUpdate()">
+        <a href="https://ivark.github.io/AntimatterDimensions/">Antimatter Dimensions</a>
+        <a href="https://antimatter-dimensions.fandom.com/wiki/Glyphs">Info</a>
+        <hr>
+        <div class="CalculatorBoxArea">
+          <h2>Type</h2>
+          <div>
+            <select id="CalculatorInputGlyphType">
+              <option value="power">Power (Ω)</option>
+              <option value="infinity">Infinity (∞)</option>
+              <option value="replication">Replication (Ξ)</option>
+              <option value="time">Time (Δ)</option>
+              <option value="dilation">Dilation (Ψ)</option>
+              <option value="effarig">Effarig (Ϙ)</option>
+              <option value="cursed">Cursed (†)</option>
+              <option value="reality">Reality (Ϟ)</option>
+              <option value="companion">Companion (♥)</option>
+            </select>
+          </div>
+        </div>
+        <div class="CalculatorBoxArea">
+          <div class="CalculatorSubArea">
+            <h2>Level</h2>
+            <div class="CalculatorTextDescription">
+              (Input a value from 1 to 1000000)<br>
+              (Only Lv. 666 Cursed appear in-game)<br>
+            </div>
+            <input id="CalculatorInputGlyphLevel" type="number" min="1" max="1000000" value="1">
+          </div>
+          <div class="CalculatorSubArea">
+            <h2>Rarity</h2>
+            <div class="CalculatorTextDescription">
+              (Input a value from 0 to 100 with decimals if needed)
+            </div>
+            <input id="CalculatorInputRarityNumber" type="number" min="0" max="100" value="1" step="0.1">%
+          </div>
+        </div>
+        <!-- <div class="CalculatorBoxArea"> -->
+          <!-- <div class="CalculatorSubArea"> -->
+            <!-- <h2>Sacrifice</h2> -->
+            <!-- <input id="CalculatorInputSacrificeAmount" onchange="SelectGlyphLevel()" type="number" min="1" value="1"> -->
+          <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="CalculatorBoxArea"> -->
+          <!-- <div class="CalculatorSubArea"> -->
+            <!-- <h2>Base Effects</h2> -->
+            <!-- <div class="CalculatorTextDescription"> -->
+              <!-- (Check all boxes that apply)<br> -->
+              <!-- (Based on dots shown on the Glyph)<br> -->
+            <!-- </div> -->
+            <!-- <table> -->
+            <!-- <tr> -->
+            <!-- <th><input id="CalculatorBaseTL" type="checkbox">(?)</th> -->
+            <!-- <th><input id="CalculatorBaseTR" type="checkbox">(?)</th> -->
+            <!-- </tr><tr> -->
+            <!-- <th><input id="CalculatorBaseBL" type="checkbox">(?)</th> -->
+            <!-- <th><input id="CalculatorBaseBR" type="checkbox">(?)</th> -->
+            <!-- </tr> -->
+            <!-- </table> -->
+          <!-- </div> -->
+          <!-- <div class="CalculatorSubArea"> -->
+            <!-- <h2>Other Effects</h2> -->
+            <!-- <div class="CalculatorTextDescription"> -->
+              <!-- (Check box 5 if Time has Time Shard Power +X,<br> -->
+              <!-- hover over the ? icons to see which box<br>  -->
+              <!-- corresponds to what effect for Effarig) -->
+            <!-- </div> -->
+            <!-- <table> -->
+            <!-- <tr> -->
+            <!-- <th><input id="CalculatorBaseOE1" type="checkbox">(?)</th> -->
+            <!-- <th><input id="CalculatorBaseOE2" type="checkbox">(?)</th> -->
+            <!-- </tr><tr> -->
+            <!-- <th><input id="CalculatorBaseOE3" type="checkbox">(?)</th> -->
+            <!-- </tr> -->
+            <!-- </table> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+      <hr>
+      <div class="CalculatorBoxArea">
+        <h2>Result:</h2>
+        <h2 id="CalculatorResultGlyphFullTitle">Glyph</h2>
+        <div class="CalculatorResultsAreaFlex">
+          <div class="CalculatorResultGlyphBox">
+            <div id="CalculatorResultGlyphType"></div>
+            <div id="CalculatorResultGlyphLevel"></div>
+            <div id="CalculatorResultGlyphIcon"></div>
+            <div id="CalculatorResultGlyphRarity"></div>
+          </div>
+          <div class="CalculatorResultGlyphBox">
+            <div id="CalculatorResultEffectList">
+              <div class="CalculatorGlyphEffect" id="CalculatorGlyphResultADPower"></div>
+              <div class="CalculatorGlyphEffect" id="CalculatorGlyphResultDimboostMult"></div>
+              <div class="CalculatorGlyphEffect" id="CalculatorGlyphResultADBuy10Mult"></div>
+              <div class="CalculatorGlyphEffect" id="CalculatorGlyphResultIDPower"></div>
+              <div class="CalculatorGlyphEffect" id="CalculatorGlyphResultResultInfinityGain"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <a href="https://twitter.com/SuminomAmonimus">Amonimus</a>
+      <hr>
+    </div>
+    <script src="AntimaterCalculator.js"></script>
+  </body>
+</html>
